@@ -11,6 +11,8 @@
   <system:String x:Key="context.pitch.pointsnapprev">Snap to previous note</system:String>
 
   <system:String x:Key="debug.clear">Clear</system:String>
+    
+  <system:String x:Key="debug.reverselogorder">Reverse Log Order</system:String>
 
   <system:String x:Key="dialogs.about.caption">About OpenUTAU</system:String>
   <system:String x:Key="dialogs.about.message">
@@ -76,6 +78,8 @@
   <system:String x:Key="menu.file.newfromtemplate">New From Template</system:String>
   <system:String x:Key="menu.file.open">Open...</system:String>
   <system:String x:Key="menu.file.openas">Open As</system:String>
+  <system:String x:Key="menu.file.openexportlocation">Open Export Location</system:String>
+  <system:String x:Key="menu.file.openprojectlocation">Open Project Location</system:String>
   <system:String x:Key="menu.file.openrecent">Open Recent</system:String>
   <system:String x:Key="menu.file.save">Save</system:String>
   <system:String x:Key="menu.file.saveas">Save As...</system:String>
@@ -105,23 +109,23 @@
   <system:String x:Key="notedefaults.portamento.length">Length</system:String>
   <system:String x:Key="notedefaults.portamento.start">Start</system:String>
   <system:String x:Key="notedefaults.preset">Preset</system:String>
+  <system:String x:Key="notedefaults.preset.namenew">New Preset Name</system:String>
   <system:String x:Key="notedefaults.preset.remove">Remove</system:String>
   <system:String x:Key="notedefaults.preset.remove.tooltip">Removes last applied preset.</system:String>
   <system:String x:Key="notedefaults.preset.save">Save</system:String>
   <system:String x:Key="notedefaults.preset.save.tooltip">Save current settings to a new preset.</system:String>
-  <system:String x:Key="notedefaults.preset.namenew">New Preset Name</system:String>
   <system:String x:Key="notedefaults.reset">Reset All Settings</system:String>
   <system:String x:Key="notedefaults.reset.tooltip">Reset every setting to default values.
 Warning: this option removes custom presets.</system:String>
   <system:String x:Key="notedefaults.vibrato">Vibrato</system:String>
-  <system:String x:Key="notedefaults.vibrato.length">Length</system:String>
-  <system:String x:Key="notedefaults.vibrato.period">Period</system:String>
+  <system:String x:Key="notedefaults.vibrato.autominlength">Minimum Length</system:String>
+  <system:String x:Key="notedefaults.vibrato.autotoggle">Automatic Vibrato by Length</system:String>
   <system:String x:Key="notedefaults.vibrato.depth">Depth</system:String>
   <system:String x:Key="notedefaults.vibrato.in">Fade In</system:String>
+  <system:String x:Key="notedefaults.vibrato.length">Length</system:String>
   <system:String x:Key="notedefaults.vibrato.out">Fade Out</system:String>
+  <system:String x:Key="notedefaults.vibrato.period">Period</system:String>
   <system:String x:Key="notedefaults.vibrato.shift">Shift</system:String>
-  <system:String x:Key="notedefaults.vibrato.autotoggle">Automatic Vibrato by Length</system:String>
-  <system:String x:Key="notedefaults.vibrato.autominlength">Minimum Length</system:String>
 
   <system:String x:Key="oto.alias">Alias</system:String>
   <system:String x:Key="oto.color">Color</system:String>
@@ -226,8 +230,17 @@ Warning: moresampler is not fully supported. It may be slow and cause high CPU u
 
   <system:String x:Key="singers.caption">Singers</system:String>
   <system:String x:Key="singers.location">Location</system:String>
+  <system:String x:Key="singers.otoview.moveleft">Move Left</system:String>
+  <system:String x:Key="singers.otoview.moveright">Move Right</system:String>
+  <system:String x:Key="singers.otoview.selectnext">Select Next</system:String>
+  <system:String x:Key="singers.otoview.selectprev">Select Prev</system:String>
+  <system:String x:Key="singers.otoview.showall">Show All</system:String>
+  <system:String x:Key="singers.otoview.zoomin">Zoom In</system:String>
+  <system:String x:Key="singers.otoview.zoomout">Zoom Out</system:String>
   <system:String x:Key="singers.refresh">Refresh</system:String>
+  <system:String x:Key="singers.setdefaultphonemizer">Set Default Phonemizer</system:String>
   <system:String x:Key="singers.setencoding">Set Encoding</system:String>
+  <system:String x:Key="singers.setportrait">Set Portrait</system:String>
   <system:String x:Key="singers.subbanks.cancel">Cancel</system:String>
   <system:String x:Key="singers.subbanks.clear">Clear</system:String>
   <system:String x:Key="singers.subbanks.color">Color</system:String>

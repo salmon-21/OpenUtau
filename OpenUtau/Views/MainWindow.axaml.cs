@@ -34,6 +34,7 @@ namespace OpenUtau.App.Views {
         private PartEditState? partEditState;
         private Rectangle? selectionBox;
         private DispatcherTimer timer;
+        private DispatcherTimer autosaveTimer;
         private bool forceClose;
 
         public MainWindow() {
@@ -48,6 +49,12 @@ namespace OpenUtau.App.Views {
                 DispatcherPriority.Normal,
                 (sender, args) => PlaybackManager.Inst.UpdatePlayPos());
             timer.Start();
+
+            autosaveTimer = new DispatcherTimer(
+                TimeSpan.FromSeconds(30),
+                DispatcherPriority.Normal,
+                (sender, args) => DocManager.Inst.AutoSave());
+            autosaveTimer.Start();
 
             AddHandler(DragDrop.DropEvent, OnDrop);
 
@@ -133,6 +140,27 @@ namespace OpenUtau.App.Views {
             viewModel.RefreshOpenRecent();
             viewModel.RefreshTemplates();
             viewModel.RefreshCacheSize();
+        }
+
+        void OnMenuOpenProjectLocation(object sender, RoutedEventArgs args) {
+            var project = DocManager.Inst.Project;
+            if (string.IsNullOrEmpty(project.FilePath) || !project.Saved) {
+                MessageBox.Show(
+                    this,
+                    ThemeManager.GetString("dialogs.export.savefirst"),
+                    ThemeManager.GetString("errors.caption"),
+                    MessageBox.MessageBoxButtons.Ok);
+            }
+            try {
+                OS.OpenFolder(System.IO.Path.GetDirectoryName(project.FilePath));
+            } catch (Exception e) {
+                Log.Error(e, "Failed to open project location.");
+                MessageBox.Show(
+                    this,
+                    e.ToString(),
+                    ThemeManager.GetString("errors.caption"),
+                    MessageBox.MessageBoxButtons.Ok);
+            }
         }
 
         async void OnMenuSave(object sender, RoutedEventArgs args) => await Save();
